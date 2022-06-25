@@ -410,7 +410,8 @@ const BillInfo = ({ bill, billNum }) => {
             </Button>
             <div className={classes.totalcontainer}>
               <div className={classes.boldletter}>Total:</div>
-              <div>{bill.cents} €</div>
+              {/* <div>{bill.cents} €</div> */}
+              <div>{(parseFloat(bill.cents)/100).toFixed(2)} €</div>
             </div>
           </Grid>
         </Grid>
